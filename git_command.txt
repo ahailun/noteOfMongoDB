@@ -6,3 +6,9 @@ Already up-to-date.
 解决方法：
 git checkout -- .
 
+
+
+上传至远程仓库
+git add test.txt
+git commit -m "to use command to upload"
+git push origin master
