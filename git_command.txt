@@ -1,0 +1,8 @@
+错误提示：
+$ git pull origin master
+From https://github.com/ahailun/noteOfMongoDB
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+解决方法：
+git checkout -- .
+
