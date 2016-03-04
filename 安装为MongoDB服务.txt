@@ -1,0 +1,3 @@
+在安装服务这步我遇到了一个蛋疼的问题，它报这个错误： 　 32-bit servers don't have journaling enabled by default. Please use --journal if you want durability. 　 遇到错误千万不要急，仔细阅读错误提示，然后在这个命令下面加上：--journal 这个就行了：F:/mongodb/bin>mongod --dbpath "F:/mongodb/db" --logpath "F:/mongodb/log/MongoDB.log" --install --serviceName "MongoDB"  --journal 就是这样，发现成功了。 　 然后执行 net start MongoDB. 　 服务启动成功。
+
+http://www.it165.net/database/html/201308/4284.html
