@@ -65,10 +65,11 @@ class CARGOINFO:
             willSave += (eachCargo_Obj.thingToSave_offcount + eachCargo_Obj.thingToSave_onsale)
         self.tickCotent += '\n----------------------'
 
-        if len(onsaleInfo) != 0 and eachCargo_Obj.onsaleNum != 0:
+        if len(onsaleInfo) != 0:
             self.tickCotent += '\n买二赠一商品：'
             for i in xrange(len(onsaleInfo)):
-                self.tickCotent += '\n名称：%s，数量：%s%s' % tuple(onsaleInfo[i][0:])
+                if onsaleInfo[i][1] != 0:
+                    self.tickCotent += '\n名称：%s，数量：%s%s' % tuple(onsaleInfo[i][0:])
             self.tickCotent += '\n----------------------'
 
         self.tickCotent += '\n总计：%.2f' % totalToPay
